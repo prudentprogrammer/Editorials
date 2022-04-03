@@ -46,7 +46,7 @@ def findWinners(self, matches: List[List[int]]) -> List[List[int]]:
 Time Complexity: `O(nlogn)` (sorting)
 Space Complexity: `O(3n) = O(n)`
 
-Approach 2: Use one map and sort in the very end. First initialize the winner with count 0, if we encounter the winner again in the loser's position for another match, the count will be >= 1.
+**Approach 2:** Use one map and sort in the very end. First initialize the winner with count 0, if we encounter the winner again in the loser's position for another match, the count will be >= 1.
 
 ```python
 def findWinners(self, matches: List[List[int]]) -> List[List[int]]:
@@ -64,12 +64,12 @@ def findWinners(self, matches: List[List[int]]) -> List[List[int]]:
     return [sorted(x) for x in res]
 ```
 
-Time Complexity: `O(nlogn)` (sorting)
-Space Complexity: `O(3n) = O(n)`
+***Time Complexity: `O(nlogn)` (sorting)
+Space Complexity: `O(3n) = O(n)`***
 
 Approach 3: Bucket Sort
 
-```
+```python
 def findWinners(self, matches: List[List[int]]) -> List[List[int]]:
         max_number = float('-inf')
         for winner, loser in matches:
